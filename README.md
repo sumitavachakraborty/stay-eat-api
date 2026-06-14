@@ -1,4 +1,4 @@
-# se-backend — stay and eat API
+# stay-eat-api — stay and eat API
 
 Rails 8 API-only backend for the **stay and eat** homestay platform ("stay-and-eat").
 
@@ -24,7 +24,7 @@ Rails 8 API-only backend for the **stay and eat** homestay platform ("stay-and-e
 ### Setup
 
 ```bash
-cd se-backend
+cd stay-eat-api
 bundle install
 rails db:create db:migrate db:seed
 rails server -p 3001
@@ -56,7 +56,7 @@ The API will be available at `http://localhost:3001`.
 
 ```bash
 # Build
-docker build -t se-backend .
+docker build -t stay-eat-api .
 
 # Run (assumes Postgres on the same network)
 docker run --rm -p 3001:3001 \
@@ -64,7 +64,7 @@ docker run --rm -p 3001:3001 \
   -e DATABASE_USER=postgres \
   -e DATABASE_PASSWORD=postgres \
   -e RAILS_ENV=development \
-  se-backend
+  stay-eat-api
 ```
 
 ---
