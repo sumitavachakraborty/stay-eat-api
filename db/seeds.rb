@@ -409,7 +409,7 @@ rewards_data = [
   { tier: "Verified",      met: true,  description: "Photo Quality Checks on every booking", count_label: "92 / 92"   },
   { tier: "Verified+",     met: true,  description: "4.9★ for 6 months · sub-2hr response",  count_label: "4.97 ★"   },
   { tier: "Sustainer",     met: false, description: "Reviewed by 200 guests",                count_label: "142 / 200" },
-  { tier: "Hearth Circle", met: false, description: "Top 1% in your region",                 count_label: "— locked"  },
+  { tier: "stay and eat Circle", met: false, description: "Top 1% in your region",                 count_label: "— locked"  },
 ]
 
 rewards_data.each { |r| Reward.create!(r.merge(user: mara)) }
