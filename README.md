@@ -1,6 +1,6 @@
-# se-backend — hearth API
+# se-backend — stay and eat API
 
-Rails 8 API-only backend for the **hearth** homestay platform ("stay-and-eat").
+Rails 8 API-only backend for the **stay and eat** homestay platform ("stay-and-eat").
 
 ## Stack
 
@@ -73,8 +73,8 @@ docker run --rm -p 3001:3001 \
 
 | Role | Email | Password |
 |---|---|---|
-| Host | `mara@hearth.test` | `password` |
-| Traveller | `eli@hearth.test` | `password` |
+| Host | `mara@stayandeat.test` | `password` |
+| Traveller | `eli@stayandeat.test` | `password` |
 
 ---
 
@@ -192,7 +192,7 @@ Body: { "name": "Jane", "email": "jane@example.com", "password": "secret", "role
 #### Log in
 ```
 POST /api/v1/auth/login
-Body: { "email": "eli@hearth.test", "password": "password" }
+Body: { "email": "eli@stayandeat.test", "password": "password" }
 
 → 200 { "token": "eyJ...", "user": { ... } }
 → 401 { "error": "Invalid email or password" }  (on bad creds)
@@ -202,7 +202,7 @@ Body: { "email": "eli@hearth.test", "password": "password" }
 ```
 GET /api/v1/auth/me
 
-→ 200 { "user": { "id": 2, "name": "Eli Tanaka", "email": "eli@hearth.test", "role": "traveller" } }
+→ 200 { "user": { "id": 2, "name": "Eli Tanaka", "email": "eli@stayandeat.test", "role": "traveller" } }
 → 401 { "error": "Missing token" }
 ```
 
@@ -257,7 +257,7 @@ GET /api/v1/host/analytics
     { "tier": "Verified",  "met": true,  "desc": "Photo Quality Checks on every booking", "count": "92 / 92" },
     { "tier": "Verified+", "met": true,  "desc": "4.9★ for 6 months · sub-2hr response",  "count": "4.97 ★"  },
     { "tier": "Sustainer", "met": false, "desc": "Reviewed by 200 guests",                "count": "142 / 200" },
-    { "tier": "Hearth Circle", "met": false, "desc": "Top 1% in your region",             "count": "— locked" }
+    { "tier": "stay and eat Circle", "met": false, "desc": "Top 1% in your region",             "count": "— locked" }
   ]
 }
 ```

@@ -12,14 +12,14 @@ puts "Seeding database..."
 # ─────────────────────────────────────────────────────────────────────────────
 mara = User.create!(
   name:     "Mara Linden",
-  email:    "mara@hearth.test",
+  email:    "mara@stayandeat.test",
   password: "password",
   role:     "host"
 )
 
 eli = User.create!(
   name:     "Eli Tanaka",
-  email:    "eli@hearth.test",
+  email:    "eli@stayandeat.test",
   password: "password",
   role:     "traveller"
 )
@@ -429,5 +429,5 @@ puts "  Created #{Review.count} reviews"
 puts "Seeding complete! ✓"
 puts ""
 puts "Seeded logins:"
-puts "  Host:      mara@hearth.test / password"
-puts "  Traveller: eli@hearth.test  / password"
+puts "  Host:      mara@stayandeat.test / password"
+puts "  Traveller: eli@stayandeat.test  / password"
